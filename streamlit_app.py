@@ -5,8 +5,7 @@ from sqlalchemy import create_engine, text
 import streamlit as st
 import altair as alt
 import pandas as pd
-import dbconfig
-
+import st.secrets["
 
 
 # Title
@@ -21,7 +20,7 @@ st.write("DB username:", st.secrets["DB_HOST"])
 def connect_db():
     """Connects to the postgresql database."""
 
-    DB_FILENAME = f"postgres://{dbconfig.DB_USER}:{dbconfig.DB_PASS}@{dbconfig.DB_HOST}:{dbconfig.DB_PORT}/{dbconfig.DB_NAME}?sslmode=require"
+    DB_FILENAME = f"postgres://{st.secrets["DB_USER"]}:{st.secrets["DB_PASS"]}@{st.secrets["DB_HOST"]}:{st.secrets["DB_PORT"]}/{st.secrets["DB_NAME"]}?sslmode=require"
     db_already_exists = Path(DB_FILENAME).exists()
 
     engine = create_engine(DB_FILENAME)
@@ -196,7 +195,7 @@ def update_data(conn, df, changes):
 
 
 """
-# Kalulu's health tracker
+# Test
 
 **=intentory tracker!**
 This page reads and writes directly from/to our inventory database.
