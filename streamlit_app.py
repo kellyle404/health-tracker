@@ -11,12 +11,12 @@ import dbconfig
 
 # Title
 st.set_page_config(
-    page_title="Kalulu's supplements tracker",
+    page_title="Kalulu's tracker",
     layout="wide"
 )
 # -----------------------------------------------------------------------------
 
-st.write("DB username:", st.secrets["DB_USER"])
+st.write("DB username:", st.secrets["DB_HOST"])
 
 def connect_db():
     """Connects to the postgresql database."""
