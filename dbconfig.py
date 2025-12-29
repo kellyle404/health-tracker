@@ -1,5 +1,4 @@
 DB_USER = "avnadmin"
-DB_PASS = "AVNS_ofRYduyxso-MQkaeO6m"
-DB_HOST = "kalulu404dbserver-kalulu404dbserver.g.aivencloud.com"
+
 DB_PORT = "27490"
 DB_NAME = "defaultdb"
