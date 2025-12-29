@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, text
 import streamlit as st
 import altair as alt
 import pandas as pd
-import st.secrets["
+import st.secrets
 
 
 # Title
