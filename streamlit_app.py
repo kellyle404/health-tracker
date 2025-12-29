@@ -16,6 +16,7 @@ st.set_page_config(
 )
 # -----------------------------------------------------------------------------
 
+st.write("DB username:", st.secrets["DB_USER"])
 
 def connect_db():
     """Connects to the postgresql database."""
@@ -25,7 +26,7 @@ def connect_db():
 
     engine = create_engine(DB_FILENAME)
     conn = engine.connect()
-    print("Connected to the database successfully.")
+    st.write("Connected to the database successfully.")
     db_was_just_created = not db_already_exists
 
     return conn, db_was_just_created
